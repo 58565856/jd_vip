@@ -10,7 +10,7 @@ $exec('python3 https://raw.githubusercontent.com/Oreomeow/VIP/main/Scripts/py/We
     MSG: $store.get('MSG', 'string'),
     IMAGE: $store.get('IMAGE', 'string'),
     CONTENT: $store.get('CONTENT', 'string'),
-    QYWX_AM: $store.get('QYWX_AM', 'string'),  
+    QYWX_AM: $store.get('QYWX_APP', 'string'),  
   },
   cb(data, error) {
     error ? console.error(error) : console.log(data)
