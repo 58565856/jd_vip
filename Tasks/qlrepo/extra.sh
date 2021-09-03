@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-## Mod: Build20210825V2
+## Mod: Build20210903V1
 ## 添加你需要重启自动执行的任意命令，比如 ql repo
 ## 安装node依赖使用 pnpm install -g xxx xxx（Build 20210728-002 及以上版本的 code.sh，可忽略）
 ## 安装python依赖使用 pip3 install xxx（Build 20210728-002 及以上版本的 code.sh，可忽略）
@@ -51,6 +51,7 @@ Ninja="on" ##up为更新，on为启动，down为不运行
 12-star261
 13-Wenmoux
 14-Tsukasa007
+15-ccwav
 EOF
 
 
@@ -117,6 +118,9 @@ OR13(){
 }
 OR14(){
     ql repo https://github.com/Tsukasa007/my_script.git "jd_|jx_" "jdCookie|USER_AGENTS|sendNotify|backup" "" "master"
+}
+OR15(){
+    ql repo https://github.com/ccwav/QLScript.git "jd_" "sendNotify.js" "ql.js"
 }
 for i in ${OtherRepo[@]}; do
     OR$i
