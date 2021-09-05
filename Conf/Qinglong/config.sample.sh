@@ -1,6 +1,6 @@
 ## Version: v2.8.0
 ## Date: 2021-06-20
-## Mod: Build20210905-001
+## Mod: Build20210905-002
 ## Update Content: 可持续发展纲要\n1. session管理破坏性修改\n2. 配置管理可编辑config下文件\n3. 自定义脚本改为查看脚本\n4. 移除互助相关
 
 ## 上面版本号中，如果第2位数字有变化，那么代表增加了新的参数，如果只有第3位数字有变化，仅代表更新了注释，没有增加新的参数，可更新可不更新
@@ -671,6 +671,7 @@ export JD_OPENCARD_COOL_SUMMER2=""
 
 # ccwav 环境变量
 ## [1] jd_CheckCK.js
+### 当有自动禁用或自动启用事件发生才会发送通知，如果要每次都通知则需设定变量
 ### 自动检测账号是否正常，不正常的自动禁用，正常的如果是禁用状态则自动启用
 export SHOWSUCCESSCK="false" ##显示正常CK，true为显示
 export CKALWAYSNOTIFY="false" ##通知CK状态，true为永远通知 
