@@ -80,23 +80,24 @@ docker_install() {
 docker_install
 warn "降低学习成本，小白回车到底，一路默认选择"
 # 配置文件保存目录
-echo -n -e "\e[33m一、请输入配置文件保存的绝对路径（示例：/root)，回车默认为当前目录:\e[0m"
+echo -n -e "\e[33m一、请输入配置文件保存的绝对路径（示例：/root/ql1)，回车默认为 当前目录/ql:\e[0m"
 read ql_path
 if [ -z "$ql_path" ]; then
-    QL_PATH=$SHELL_FOLDER
+    mkdir -p $SHELL_FOLDER/ql
+    QL_PATH=$SHELL_FOLDER/ql
 elif [ -d "$ql_path" ]; then
     QL_PATH=$ql_path
 else
     mkdir -p $ql_path
     QL_PATH=$ql_path
 fi
-CONFIG_PATH=$QL_PATH/ql/config
-DB_PATH=$QL_PATH/ql/db
-REPO_PATH=$QL_PATH/ql/repo
-RAW_PATH=$QL_PATH/ql/raw
-SCRIPT_PATH=$QL_PATH/ql/scripts
-LOG_PATH=$QL_PATH/ql/log
-JBOT_PATH=$QL_PATH/ql/jbot
+CONFIG_PATH=$QL_PATH/config
+DB_PATH=$QL_PATH/db
+REPO_PATH=$QL_PATH/repo
+RAW_PATH=$QL_PATH/raw
+SCRIPT_PATH=$QL_PATH/scripts
+LOG_PATH=$QL_PATH/log
+JBOT_PATH=$QL_PATH/jbot
 
 # 检测镜像是否存在
 if [ ! -z "$(docker images -q $DOCKER_IMG_NAME:$TAG 2> /dev/null)" ]; then
