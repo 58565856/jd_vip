@@ -689,10 +689,10 @@ export NOTIFY_SKIP_LIST=""
 export NOTIFY_GROUP_LIST=""
 ### 3. REMARK处理
 ### 例：账号名:ccwav  别名:ccwav的别名  Remark:代码玩家
-export SHOWREMARKTYPE="1"    效果: 账号名称：代码玩家
-#export SHOWREMARKTYPE="2"    效果: 账号名称：ccwav的别名(代码玩家)
-#export SHOWREMARKTYPE="3"    不做处理，效果: 账号名称：ccwav   
-#export SHOWREMARKTYPE="4"    不做处理，效果: 账号名称：ccwav(代码玩家)
+export SHOWREMARKTYPE="1"    ##效果: 账号名称：代码玩家
+#export SHOWREMARKTYPE="2"   ##效果: 账号名称：ccwav的别名(代码玩家)
+#export SHOWREMARKTYPE="3"   ##不做处理，效果: 账号名称：ccwav   
+#export SHOWREMARKTYPE="4"   ##不做处理，效果: 账号名称：ccwav(代码玩家)
 ### 4. REAMARK跳过
 ### 单独指定某些脚本不做REMARK处理，京东CK检测加了处理Remark，所以最好是加上不处理
 export NOTIFY_SKIP_REMARK_LIST="京东CK检测"
