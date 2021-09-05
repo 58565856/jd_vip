@@ -668,3 +668,38 @@ export JD_OPENCARD_EAT_OPEN_OPENCARD=""
 ## 8、8.5-8.12 大牌联合 冰爽一夏 钜惠送好礼
 ### 填写11就是跑到11个ck就停止，填写21就是跑到21个ck就停止，一天最多助力20个ck，推荐10的倍数 +1 填写！！
 export JD_OPENCARD_COOL_SUMMER2=""
+
+# ccwav 环境变量
+## [1] jd_CheckCK.js
+### 自动检测账号是否正常，不正常的自动禁用，正常的如果是禁用状态则自动启用
+export SHOWSUCCESSCK="false" ##显示正常CK，true为显示
+export CKALWAYSNOTIFY="false" ##通知CK状态，true为永远通知 
+export CKAUTOENABLE="true" ##自动启用CK，false为停用
+export CKREMARK="true" #显示CK备注，false为不显示
+## [2] jd_bean_change.js
+### 自用的京东资产变动查询加强版
+export BEANCHANGE_PERSENT="10" ##10合1
+## [3] sendNotify.js
+### 1. 通知黑名单
+### 如果通知标题在此变量里面存在（&隔开），则用屏蔽不发送通知，继承Ninja。例：export NOTIFY_SKIP_LIST="京东CK检测&京东资产变动"
+export NOTIFY_SKIP_LIST=""
+### 2. 第2套通知
+### 如果通知标题在此变量里面存在（&隔开），则用第2套推送变量进行配置。例：export NOTIFY_GROUP_LIST="京东CK检测&京东资产变动&Ninja 运行通知"
+### 以企业微信为例，企业微信配置了 QYWX_AM 和 QYWX_AM2，则执行京东资产变动时会推送到 QYWX_AM2 配置的企业微信
+export NOTIFY_GROUP_LIST=""
+### 3. REMARK处理
+### 例：账号名:ccwav  别名:ccwav的别名  Remark:代码玩家
+export SHOWREMARKTYPE="1"    效果: 账号名称：代码玩家
+#export SHOWREMARKTYPE="2"    效果: 账号名称：ccwav的别名(代码玩家)
+#export SHOWREMARKTYPE="3"    不做处理，效果: 账号名称：ccwav   
+#export SHOWREMARKTYPE="4"    不做处理，效果: 账号名称：ccwav(代码玩家)
+### 4. REAMARK跳过
+### 单独指定某些脚本不做REMARK处理，京东CK检测加了处理Remark，所以最好是加上不处理
+export NOTIFY_SKIP_REMARK_LIST="京东CK检测"
+### 5. 第2套兑换通知
+### 东东农场 东东萌宠 京喜工厂，这三个任务接收到产品可以兑换通知时推送到群组2
+### 以企业微信为例，企业微信配置了 QYWX_AM 和 QYWX_AM2，则发送兑换通知时会推送到 QYWX_AM2 配置的企业微信
+export NOTIFY_COMPTOGROUP2="false" ##true为推送到群组2
+### 6. 屏蔽ck失效通知
+### 执行东东农场等脚本时有CK失效也不会推送ck失效通知
+export NOTIFY_NOCKFALSE="true"
