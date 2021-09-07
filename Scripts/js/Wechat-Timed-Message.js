@@ -3,7 +3,7 @@ $exec('python3 https://raw.githubusercontent.com/Oreomeow/VIP/main/Scripts/py/We
   cwd: './script/Shell',
   timeout: 0,
   env: {
-    SCKEY: $store.get('SCKEY', 'string'),
+    PUSH_KEY: $store.get('PUSH_KEY', 'string'),
     PUSH_PLUS_TOKEN: $store.get('PUSH_PLUS_TOKEN', 'string'),
     PUSH_PLUS_TOPIC: $store.get('PUSH_PLUS_TOPIC', 'string'),
     TITLE: $store.get('TITLE', 'string'),

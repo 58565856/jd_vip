@@ -23,7 +23,7 @@ EUserv_ID = os.environ.get('EUserv_ID')  # 用户名，邮箱也可
 EUserv_PW = os.environ.get('EUserv_PW')  # 密码
 
 # Server酱 http://sc.ftqq.com/?c=code
-SCKEY = os.environ.get('SCKEY')  # Server酱的key，无需推送可不填 示例: SCU646xxxxxxxxdacd6a5dc3f6
+SCKEY = os.environ.get('PUSH_KEY')  # Server酱的key，无需推送可不填 示例: SCU646xxxxxxxxdacd6a5dc3f6
 
 # 酷推 https://cp.xuthus.cc
 COOL_PUSH_SKEY = os.environ.get('COOL_PUSH_SKEY')

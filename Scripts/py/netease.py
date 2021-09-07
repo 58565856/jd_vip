@@ -13,13 +13,13 @@ new Env('网易云音乐签到')
 env
 "phone": os.getenv('NETEASE_USER'),
 "password": os.getenv('NETEASE_PWD'),
-"sc_key": os.getenv('SCKEY'),
+"sc_key": os.getenv('PUSH_KEY'),
 "tg_bot_key": [os.getenv('TG_BOT_TOKEN'), os.getenv('TG_USER_ID')],
 "bark_key": os.getenv('BARK'),
 "wecom_key": [os.getenv('WECOMCHAN_DOMAIN'), os.getenv('WECOMCHAN_SEND_KEY'), os.getenv('WECOMCHAN_TO_USER', '@all')],
 "push_plus_key": os.getenv('PUSH_PLUS_TOKEN'),
 "qmsg_key": os.getenv('QMSG_KEY'),
-"ding_token": os.getenv('DD_BOT_ACCESS_TOKEN')
+"ding_token": os.getenv('DD_BOT_TOKEN')
 ------------
 pip3 install requests==2.24.0 pycryptodome==3.9.8 
 """
@@ -68,13 +68,13 @@ def get_envs():
     infos = {
     "phone": os.getenv('NETEASE_USER'),
     "password": os.getenv('NETEASE_PWD'),
-    "sc_key": os.getenv('SCKEY'),
+    "sc_key": os.getenv('PUSH_KEY'),
     "tg_bot_key": [os.getenv('TG_BOT_TOKEN'), os.getenv('TG_USER_ID')],
     "bark_key": os.getenv('BARK'),
     "wecom_key": [os.getenv('WECOMCHAN_DOMAIN'), os.getenv('WECOMCHAN_SEND_KEY'), os.getenv('WECOMCHAN_TO_USER', '@all')],
     "push_plus_key": os.getenv('PUSH_PLUS_TOKEN'),
     "qmsg_key": os.getenv('QMSG_KEY'),
-    "ding_token": os.getenv('DD_BOT_ACCESS_TOKEN')
+    "ding_token": os.getenv('DD_BOT_TOKEN')
     }
     return infos
 

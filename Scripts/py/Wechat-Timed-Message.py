@@ -9,7 +9,7 @@ import json
 import requests
 import urllib.parse
 
-sckey = os.getenv('SCKEY')
+sckey = os.getenv('PUSH_KEY')
 pptoken = os.getenv('PUSH_PLUS_TOKEN')
 pptopic = os.getenv('PUSH_PLUS_TOPIC')
 title = os.getenv('TITLE')
