@@ -22,4 +22,4 @@ services:
       # - EMAIL=另一个邮箱
       # - PASSWORD=另一个密码
     # volumes:
-      # - $PWD:/epicgames_claimer
+      # - $PWD/User_Data:/User_Data
