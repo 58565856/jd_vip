@@ -6,7 +6,7 @@ $exec('python3 https://raw.githubusercontent.com/Oreomeow/VIP/main/Scripts/py/EU
   env: {
     EUserv_ID: $store.get('EUserv_ID', 'string'),
     EUserv_PW: $store.get('EUserv_PW', 'string'),
-    SCKEY: $store.get('SCKEY', 'string'),
+    PUSH_KEY: $store.get('PUSH_KEY', 'string'),
     COOL_PUSH_SKEY: $store.get('COOL_PUSH_SKEY', 'string'),
     COOL_PUSH_MODE: $store.get('COOL_PUSH_MODE', 'string'),
     PUSH_PLUS_TOKEN: $store.get('PUSH_PLUS_TOKEN', 'string'),
