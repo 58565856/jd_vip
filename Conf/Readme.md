@@ -562,6 +562,11 @@ for (( i = 11; i <= j; i++ )); do
 done
 ## 39、秋新资联合开卡
 export guaopencardRun17="true" ##开卡任务
+## 40、 24 及之后的开卡变量
+export guaopencard_All="true"
+export guaopencard_addSku_All="true"
+export guaopencardRun_All="true"
+export guaopencard_draw="true"
 ```
 
 
