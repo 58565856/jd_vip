@@ -2,7 +2,7 @@ version: '3'
 services:
 
   epic-a:
-    image: luminoleon/epicgames-claimer
+    image: luminoleon/epicgames-claimer:latest
     container_name: epic-a
     restart: unless-stopped
     environment:
@@ -13,7 +13,7 @@ services:
     volumes:
       - $PWD/User_Data:/User_Data
   # epic-b:
-    # image: luminoleon/epicgames-claimer
+    # image: luminoleon/epicgames-claimer:latest
     # container_name: epic-b
     # restart: unless-stopped
     # environment:
