@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-## Mod: Build20210906V1
+## Mod: Build20210909V1
 ## 添加你需要重启自动执行的任意命令，比如 ql repo
 ## 安装node依赖使用 pnpm install -g xxx xxx（Build 20210728-002 及以上版本的 code.sh，可忽略）
 ## 安装python依赖使用 pip3 install xxx（Build 20210728-002 及以上版本的 code.sh，可忽略）
@@ -23,8 +23,9 @@
 CollectedRepo=(4) ##示例：CollectedRepo=(2 4 6)
 OtherRepo=() ##示例：OtherRepo=(1 3)
 ## 2. 是否安装依赖和安装依赖包的名称设置
-dependencies="no" ##yes为安装，no为不安装
-package_name="canvas png-js date-fns axios crypto-js ts-md5 tslib @types/node dotenv typescript fs require tslib"
+dependencies="r" ##yes为全部安装，no为不安装，p为安装package，r为安装requirement
+package_name="@types/node axios canvas crypto-js date-fns dotenv fs jsdom png-js require ts-md5 tslib typescript"
+requirement_name="cryptography~=3.2.1 json5 requests rsa"
 ## 3. Ninja 是否需要启动和更新设置
 Ninja="on" ##up为更新，on为启动，down为不运行
 
@@ -170,7 +171,7 @@ fi
 
 
 # 📦依赖
-install_dependencies_normal(){
+install_packages_normal(){
     for i in $@; do
         case $i in
             canvas)
@@ -196,7 +197,7 @@ install_dependencies_normal(){
     done
 }
 
-install_dependencies_force(){
+install_packages_force(){
     for i in $@; do
         case $i in
             canvas)
@@ -229,13 +230,43 @@ install_dependencies_force(){
     done
 }
 
-install_dependencies_all(){
-    install_dependencies_normal $package_name
+install_packages_all(){
+    install_packages_normal $package_name
     for i in $package_name; do
-        install_dependencies_force $i
+        install_packages_force $i
     done
 }
 
-if [ "$dependencies" = "yes" ]; then
-    install_dependencies_all &
-fi
+install_requirements(){
+    for i in $requirement_name; do
+        case $i in
+            cryptography~=3.2.1)
+                cd /ql/scripts
+                if [[ "$(pip3 freeze)" =~ "cryptography==3.2.1" ]]; then
+                    echo "cryptography==3.2.1 已安装"
+                else
+                    apk add --no-cache gcc libffi-dev musl-dev openssl-dev python3-dev && pip3 install cryptography~=3.2.1
+                fi
+                ;;
+            *)
+                if [[ "$(pip3 freeze)" =~ $i ]]; then
+                    echo "$i 已安装"
+                else
+                    pip3 install $i
+                fi
+        esac
+    done
+}
+
+case $dependencies in
+    yes)
+    install_packages_all &
+    install_requirements &
+    ;;
+    p)
+    install_packages_all &
+    ;;
+    r)
+    install_requirements & 
+    ;;   
+esac
