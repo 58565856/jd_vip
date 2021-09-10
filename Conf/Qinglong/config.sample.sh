@@ -498,7 +498,8 @@ export CleanUsers=""
 export SHOWSUCCESSCK="false" ##显示正常CK，true为显示
 export CKALWAYSNOTIFY="false" ##通知CK状态，true为永远通知 
 export CKAUTOENABLE="true" ##自动启用CK，false为停用
-export CKREMARK="true" #显示CK备注，false为不显示
+export CKREMARK="true" ##显示CK备注，false为不显示
+export CKNOWARNERROR="true" ##服务器空数据等错误不触发通知，false为通知
 ## [2] jd_bean_change.js
 ### 自用的京东资产变动查询加强版
 export BEANCHANGE_PERSENT="10" ##10合1
@@ -524,11 +525,14 @@ export NOTIFY_SKIP_REMARK_LIST="京东CK检测"
 ### 以企业微信为例，企业微信配置了 QYWX_AM 和 QYWX_AM2，则发送兑换通知时会推送到 QYWX_AM2 配置的企业微信
 export NOTIFY_COMPTOGROUP2="false" ##true为推送到群组2
 ### 6. 屏蔽ck失效通知
-### 执行东东农场等脚本时有CK失效也不会推送ck失效通知
+### 执行所有脚本时，如果有单独推送CK失效的请求也不会推送失效通知
 export NOTIFY_NOCKFALSE="true"
 ### 7. 测试人
 ### 通知底部显示：本通知 By 测试人
-export NOTIFY_AUTHOR="测试人"
+#export NOTIFY_AUTHOR="测试人"
+### 8. 屏蔽登录成功
+### 屏蔽青龙登陆成功通知，登陆失败不屏蔽
+export NOTIFY_NOLOGINSUCCESS="true"
 
 # X1a0He 环境变量
 ## 1、简化版京东日资产变动通知
