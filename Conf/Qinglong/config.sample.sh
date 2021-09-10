@@ -1,6 +1,6 @@
 ## Version: v2.8.0
 ## Date: 2021-06-20
-## Mod: Build20210908-001
+## Mod: Build20210910-001
 ## Update Content: 可持续发展纲要\n1. session管理破坏性修改\n2. 配置管理可编辑config下文件\n3. 自定义脚本改为查看脚本\n4. 移除互助相关
 
 ## 上面版本号中，如果第2位数字有变化，那么代表增加了新的参数，如果只有第3位数字有变化，仅代表更新了注释，没有增加新的参数，可更新可不更新
@@ -709,3 +709,48 @@ export NOTIFY_COMPTOGROUP2="false" ##true为推送到群组2
 ### 6. 屏蔽ck失效通知
 ### 执行东东农场等脚本时有CK失效也不会推送ck失效通知
 export NOTIFY_NOCKFALSE="true"
+### 7. 测试人
+### 通知底部显示：本通知 By 测试人
+export NOTIFY_AUTHOR="测试人"
+
+# X1a0He 环境变量
+## 1、简化版京东日资产变动通知
+###支持环境变量控制每次发送的账号个数，默认为2
+export JD_BEAN_CHANGE_SENDNUM="10"
+## 2、清空购物车
+### 使用前请认真看对应注释：https://raw.githubusercontent.com/X1a0He/jd_scripts_fixed/main/jd_cart_remove.js
+### 当环境变量中存在JD_CART并设置为true时才会执行删除购物车
+export JD_CART="true"
+### 运行一次取消多全部已关注的商品。数字0表示不取关任何商品，默认20
+export JD_CART_REMOVESIZE="20"
+### 是否清空，如果为false，则上面设置了多少就只删除多少条
+export JD_CART_REMOVEALL="true"
+### 关键词，用@分隔
+export JD_CART_KEYWORDS=""
+## 3、京东试用
+### 由ZCY01二次修改：脚本默认不运行，由X1a0He修复：依然保持脚本默认不运行。true为运行
+### 使用前请认真看对应注释：https://raw.githubusercontent.com/X1a0He/jd_scripts_fixed/main/jd_try_xh.js
+export JD_TRY="true"
+export JD_TRY_PRICE="0"
+export JD_TRY_TABID="1@2@3@4@5"
+export JD_TRY_TITLEFILTERS=""
+export JD_TRY_TRIALPRICE="0"
+export JD_TRY_MINSUPPLYNUM="1"
+export JD_TRY_APPLYNUMFILTER="10000"
+export JD_TRY_APPLYINTERVAL="5000"
+export JD_TRY_MAXLENGTH="100"
+export JD_TRY_PASSZC="true"
+export JD_TRY_PLOG="true"
+export JD_TRY_WHITELIST="false"
+export JD_TRY_WHITELISTKEYWORDS=""
+## 4、批量取关店铺和商品
+### 是否执行取消关注，默认true
+### 使用前请认真看对应注释：https://raw.githubusercontent.com/X1a0He/jd_scripts_fixed/main/jd_unsubscribe_xh.js
+export JD_UNSUB="true"
+export JD_UNSEB_NOTIFY="false"
+export JD_UNSUB_GPAGESIZE="20"
+export JD_UNSUB_SPAGESIZE="20"
+export JD_UNSUB_GKEYWORDS=""
+export JD_UNSUB_SKEYWORDS=""
+export JD_UNSUB_INTERVAL="3000"
+export JD_UNSUB_PLOG="true"
