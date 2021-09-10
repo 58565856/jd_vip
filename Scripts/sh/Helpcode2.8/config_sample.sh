@@ -366,77 +366,6 @@ export JD_TRY_MIN_PRICE=""
 ### 试用商品最多提供数量（过滤垃圾商品）
 export JD_TRY_MAX_SUPPLY_COUNT=""
 
-# 龙猪猪环境变量
-## 京豆雨通知，填写true为不关闭推送，false为关闭推送
-export RAIN_NOTIFY_CONTROL="false"
-## 整点京豆雨RRA
-export SUPER_RAIN_RRA=""
-## 半点京豆雨RRA
-export HALF_RAIN_RRA=""
-
-# 柠檬（胖虎部分环境变量）
-## 1、京喜工厂抢茅台
-### 自定义商品变量
-export shopid="1598"   ##你要商品ID 冰箱
-export shopid1="1607"  ##你要商品ID 茅台
-## 2、推一推
-### 入口：极速版-赚金币 
-### 分享到QQ查看邀请码，packetId就是
-### 自定义变量
-export tytpacketId=""
-## 3、拆红包
-export chbpacketId=""
-## 4、是兄弟就砍我
-### 是兄弟就来砍我脚本要参加砍价的商品ID
-export actId=""
-export actId1=""
-export actId2=""
-export actId3=""
-export actId4=""
-### 是兄弟就来砍我脚本要要参加砍价的邀请码
-export packetId="" 
-## 5、是兄弟就砍我2
-### 惊喜欢乐砍 自定义变量 入口：京喜APP-我的-惊喜欢乐砍
-export launchid="" ##你的邀请码
-### 第一次参加变量设置为true查看商品ID，填写商品ID后自动获取邀请码邀请；如果只助力，变量设置为false
-export first="false"
-export active="" ##商品ID
-## 6、赚金币
-### 入口：极速版-百元生活费-赚金币-邀请好友
-### 第一次运行可不填写邀请码，运行一次查看自己的邀请码
-export InviterPin="" ##你的邀请码
-## 7、0元砍价，入口：京东-我的-0元砍价
-### 使用教程：
-### 第一步，运行脚本一次日志查看商品ID
-### 获取你要砍价的商品ID后变量填写
-export skuId="" ##这里填获取的商品ID
-### 第二步，再运行一次日志查看商品activityId变量填写
-export activity="" ##这里填获取的商品activityId
-## 8、邀请有礼  
-### 自定义邀请码环境变量
-export yqm="" ##你的邀请码
-## 9、全民挖现金
-### 入口：京东-我的-全民挖现金
-### 运行一次查看邀请码 变量你的邀请码 
-export shareCode=""
-## 10、省钱大赢家本期活动ID
-export redEnvelopeId="" 
-## 11、省钱大赢家邀请码
-export inviter=""
-## 12、签到领现金添加变量方式
-## 自行添加变量设置邀请码 格式如下 默认10个
-export cashinviteCode=""
-export cashinviteCode2=""
-export cashinviteCode3=""
-## 13、大老板农场 新增自定义变量通知开关。true通知打开，false为关闭
-export dlbtz="true"
-## 14、零食街自动兑换变量
-### 自行取消注释和注释
-##export lsjdh="jdAward1" ##兑换5豆
-##export lsjdh="jdAward2" ##兑换10豆
-export lsjdh="jdAward3" ##兑换100豆
-##export lsjdh="jdAward4" ##兑换牛奶
-
 # curtinlv 环境变量
 ## 1、赚京豆
 ### 助力账号，填写pt_pin或用户名的值，如 zlzh = ['aaaa','xxxx','yyyy'] ，支持ENV
@@ -495,16 +424,7 @@ export Read10UA=""
 export jrpush=""
 
 # smiek2221 环境变量
-## 1、燃动夏季—入会
-export summer_movement_joinjoinjoinhui="false" ##是否入会 true 入会，false 不入会
-## 2、燃动夏季—百元守卫战SH
-export summer_movement_ShHelpFlag="1" ##0 不开启也不助力 1 开启并助力 2 开启但不助力 默认开启并助力
-## 3、燃动夏季-新增只做邀请助力功能
-export summer_movement_HelpHelpHelpFlag="true" ##是否只执行邀请助力 true 是 false 不是 默认 false
-### 可以设置13点执行一下脚本
-if [ $(date "+%H") -eq 13 ]; then
-    export summer_movement_HelpHelpHelpFlag="true"
-fi
+
 ## 4、京东签到图形验证修改火爆问题
 ### 如果 read ECONNRESET 错误 可以试试
 ### 环境变量 JOY_HOST 修改域名 https://jdjoy.jd.com 可以改成ip https://49.7.27.236
@@ -526,37 +446,14 @@ export DDQ_NOTIFY_CONTROL="" ##不填或false为通知，true为不通知
 ## 9、组队瓜分京豆活动变量
 export jd_zdjr_activityId=""
 export jd_zdjr_activityUrl=""
-## 10、奥运夺金牌开卡
-export guaolympicopencard="true"
 ## 11、7.31-8.10 全民奥运 激情奔跑
 export guaolympicopencard2="true"
 ## 12、8.4-8.12 大牌联合 冰爽一夏
-export guaopencard4="true" ##开卡
-export guaopencard_addSku4="true" ##加购物车
-## 13、8.5-8.12 冰爽夏日 钜惠送好礼
-export guaopencard5="true" ##开卡
-export guaopencard_addSku5="true" ##加购物车
-## 14、七夕告白季
-export guaopencard6="true" ##开卡
-export guaopencard_addSku6="true" ##加购物车
-## 15、8.8-8.14 七夕会员福利社
-export guaopencard7="true" ##开卡
-export guaopencard_addSku7="true" ##加购物车
-## 16、8.10-8.15 头号玩家 一起热8
-export guaopencard8="true" ##开卡
-export guaopencard_addSku8="true" ##加购物车
-## 17、8.11-8.15 星动七夕 纵享丝滑
-export guaopencard9="true" ##开卡
-export guaopencard_addSku9="true" ##加购物车
-## 18、8.11-8.18 大牌联合 约惠一夏
-export guaopencard10="true" ##开卡
-export guaopencard_addSku10="true" ##加购物车
-## 19-38、预备
-j=30
-for (( i = 11; i <= j; i++ )); do
-    export guaopencard$i="true"
-    export guaopencard_addSku$i="true"
-done
+export guaopencard_All="true"
+export guaopencard_addSku_All="true"
+export guaopencardRun_All="true"
+export guaopencard_draw="true"
+
 
 # cdle 环境变量
 ## 1、全民运动会守卫红包
@@ -635,30 +532,3 @@ export NOTIFY_SKIP_LIST=""
 ## 1、清空购物车
 ### 将需要跳过清理的账号(cookie中的pt_pin)放到变量CleanUsers中，多个用@隔开
 export CleanUsers=""
-
-# Tsukasa007 环境变量
-## 1、7.28-8.6 定格夺冠
-### 第一个账号助力Tsukasa007，其他依次助力CK1第一个CK失效应该全都会助力Tsukasa007，亲注意一下（其他脚本逻辑都差不多）
-### 一天只能领400豆1个ck20豆，不设置变量默认只会运行到ck21，填写11就是跑到11个ck就停止，填写21就是跑到21个ck就停止，如果没豆那就改变量，ck多每天改一次收益最大化
-export JD_OPENCARE_CHAMPIONSHIP=""
-## 2、7.28-8.9 夏日呵护 母音甄选	
-### 一天只能领100豆1个ck10豆，不设置变量默认只会运行到ck11，填写11就是跑到11个ck就停止，填写22就是跑到22个ck就停止，一天最多助力10个ck，推荐11的倍数填写！！如果11没豆那就22如此类推，每天改一次收益最大化
-export JD_SUMMER_MOM_OPENCARD=""
-## 3、7.29-8.9 奥运夺金挑战赛
-### 一天只能领200豆1个ck20豆，不设置变量默认只会运行到ck11，填写11就是跑到11个ck就停止，填写22就是跑到22个ck就停止，一天最多助力10个ck，推荐11的倍数填写！！每天改一次收益最大化
-export JD_OLYMPIC_WIN_GOLD=""
-## 4、7.26-8.8 全民奔跑 激扬奥运
-### env OLYMPIC_START_DRAW = true 就是开启ck1抽奖 (!!!抽奖时间可能很长，慢慢抽吧!!!)
-export OLYMPIC_START_DRAW="true"
-## 5、8.2-8.12 奶爸盛典 爸气全开
-### 填写11就是跑到11个ck就停止，填写21就是跑到21个ck就停止，一天最多助力20个ck 推荐10的倍数 +1 填写！！
-export JD_OPENCARD_DADDY=""
-## 6、8.4-8.12 大牌联合 冰爽一夏
-### 这个活动经过Tsukasa007的测试，邀请了38个ck，有18次20豆，所以有点随机不好判断一天有多少豆，默认21停，觉得自己牛逼，就改成 999 跑完算了！！
-export JD_OPENCARD_COOL_SUMMER="999"
-## 7、7.24-8.15 嗨皮一下 食力全开
-### 填写11就是跑到11个ck就停止，填写22就是跑到22个ck就停止，一天最多助力10个ck，推荐11的倍数填写！！如果11没豆那就22如此类推，每天改一次收益最大化
-export JD_OPENCARD_EAT_OPEN_OPENCARD=""
-## 8、8.5-8.12 大牌联合 冰爽一夏 钜惠送好礼
-### 填写11就是跑到11个ck就停止，填写21就是跑到21个ck就停止，一天最多助力20个ck，推荐10的倍数 +1 填写！！
-export JD_OPENCARD_COOL_SUMMER2=""
