@@ -715,7 +715,7 @@ export NOTIFY_AUTHOR="测试人"
 
 # X1a0He 环境变量
 ## 1、简化版京东日资产变动通知
-###支持环境变量控制每次发送的账号个数，默认为2
+### 支持环境变量控制每次发送的账号个数，默认为2
 export JD_BEAN_CHANGE_SENDNUM="10"
 ## 2、清空购物车
 ### 使用前请认真看对应注释：https://raw.githubusercontent.com/X1a0He/jd_scripts_fixed/main/jd_cart_remove.js
