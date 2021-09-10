@@ -1,6 +1,6 @@
 ## Version: v2.8.0
 ## Date: 2021-06-20
-## Mod: Build20210910-002
+## Mod: Build20210910-003
 ## Update Content: 可持续发展纲要\n1. session管理破坏性修改\n2. 配置管理可编辑config下文件\n3. 自定义脚本改为查看脚本\n4. 移除互助相关
 
 ## 上面版本号中，如果第2位数字有变化，那么代表增加了新的参数，如果只有第3位数字有变化，仅代表更新了注释，没有增加新的参数，可更新可不更新
@@ -553,8 +553,8 @@ export JD_CART_KEYWORDS=""
 ### 使用前请认真看对应注释：https://raw.githubusercontent.com/X1a0He/jd_scripts_fixed/main/jd_try_xh.js
 export JD_TRY="true"
 export JD_TRY_PRICE="0"
-export JD_TRY_TABID="1@2@3@4@5"
-export JD_TRY_TITLEFILTERS=""
+export JD_TRY_TABID="1@2@3@4@5@6@7@8@9@10"
+export JD_TRY_TITLEFILTERS="保护套@擦杯布@打底裤@档案袋@电商@吊带@俄语@儿童@辅导@妇女@肛门@钢化膜@钢圈@宫颈@狗@和田玉@黑丝@狐臭@互动课@脚气@教程@解酒@戒烟@卷尺@课@老太太@流量卡@六级@美少女@糜烂@棉签@女纯棉@女孩@女内裤@女内衣@女性内裤@女性内衣@培训@培训@屏风底座@驱蚊@祛痘@软件@三角裤@少女@少女内衣@生殖器@手机壳@手机壳@手机膜@刷头@私处@四级@四六级@童装@娃娃@玩具@网课@网课@网络课程@网校@卫生巾@卫生条@文胸@小靓美@卸妆@胸罩@癣@洋娃娃@衣架@益智@阴道@阴道炎@英语@英语@婴儿@幼儿@鱼@孕妇@在线@在线网络@纸尿裤@中年@种子@"
 export JD_TRY_TRIALPRICE="0"
 export JD_TRY_MINSUPPLYNUM="1"
 export JD_TRY_APPLYNUMFILTER="10000"
