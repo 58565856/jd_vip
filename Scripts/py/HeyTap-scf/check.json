@@ -1,0 +1,9 @@
+{
+    "HEYTAP_COOKIE_LIST":[
+        {
+            "cookies":"source_type=XXX;sa_distinct_id=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX;s_channel=XXX_oppostore;s_version=XXXXXX;app_utm={\"utm_source_app\":\"direct\",\"utm_campaign_app\":\"direct\",\"utm_term_app\":\"direct\",\"utm_medium_app\":\"direct\"};",
+            "UserAgent":"",
+            "if_draw":false
+        }
+    ]
+}
